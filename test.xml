@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This is a sample XML file for parser development -->
+<library name="Central Library" established="1892">
+    <books>
+        <book id="001" available="true">
+            <title>The Great Adventure</title>
+            <author>Jane Smith</author>
+            <isbn>978-0123456789</isbn>
+            <genre>Fiction</genre>
+            <pages>342</pages>
+            <description>A thrilling tale of discovery and courage in the Amazon rainforest.</description>
+        </book>
+
+        <book id="002" available="false">
+            <title>Learning &amp; Growing</title>
+            <author>Dr. Robert Johnson</author>
+            <isbn>978-0987654321</isbn>
+            <genre>Education</genre>
+            <pages>156</pages>
+            <description>Essential techniques for personal development.</description>
+            <tags>
+                <tag>self-help</tag>
+                <tag>psychology</tag>
+                <tag>education</tag>
+            </tags>
+        </book>
+
+        <book id="003" available="true">
+            <title>Code &lt; Art</title>
+            <author>Alice Chen</author>
+            <isbn>978-0555666777</isbn>
+            <genre>Technology</genre>
+            <pages>289</pages>
+            <description>Exploring the intersection of programming and creativity.</description>
+            <metadata>
+                <published_year>2023</published_year>
+                <language>English</language>
+                <format>Hardcover</format>
+            </metadata>
+        </book>
+    </books>
+
+    <staff>
+        <person role="librarian">
+            <name first="Maria" last="Garcia"/>
+            <employee_id>LIB001</employee_id>
+        </person>
+        <person role="assistant">
+            <name first="Tom" last="Wilson"/>
+            <employee_id>LIB002</employee_id>
+        </person>
+    </staff>
+
+    <hours>
+        <weekday>9:00 AM - 8:00 PM</weekday>
+        <weekend>10:00 AM - 6:00 PM</weekend>
+    </hours>
+</library>

@@ -1,0 +1,76 @@
+{
+  "library": {
+    "_name": "Central Library",
+    "_established": "1892",
+    "books": {
+      "book": [
+        {
+          "_id": "001",
+          "_available": "true",
+          "title": "The Great Adventure",
+          "author": "Jane Smith",
+          "isbn": "978-0123456789",
+          "genre": "Fiction",
+          "pages": "342",
+          "description": "A thrilling tale of discovery and courage in the Amazon rainforest."
+        },
+        {
+          "_id": "002",
+          "_available": "false",
+          "title": "Learning & Growing",
+          "author": "Dr. Robert Johnson",
+          "isbn": "978-0987654321",
+          "genre": "Education",
+          "pages": "156",
+          "description": "Essential techniques for personal development.",
+          "tags": {
+            "tag": [
+              "self-help",
+              "psychology",
+              "education"
+            ]
+          }
+        },
+        {
+          "_id": "003",
+          "_available": "true",
+          "title": "Code < Art",
+          "author": "Alice Chen",
+          "isbn": "978-0555666777",
+          "genre": "Technology",
+          "pages": "289",
+          "description": "Exploring the intersection of programming and creativity.",
+          "metadata": {
+            "published_year": "2023",
+            "language": "English",
+            "format": "Hardcover"
+          }
+        }
+      ]
+    },
+    "staff": {
+      "person": [
+        {
+          "_role": "librarian",
+          "name": {
+            "_first": "Maria",
+            "_last": "Garcia"
+          },
+          "employee_id": "LIB001"
+        },
+        {
+          "_role": "assistant",
+          "name": {
+            "_first": "Tom",
+            "_last": "Wilson"
+          },
+          "employee_id": "LIB002"
+        }
+      ]
+    },
+    "hours": {
+      "weekday": "9:00 AM - 8:00 PM",
+      "weekend": "10:00 AM - 6:00 PM"
+    }
+  }
+}

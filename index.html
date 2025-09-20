@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>XML → JSON converter</title>
+</head>
+<body>
+  <h1>Upload XML to Convert to JSON</h1>
+  <input type="file" id="xmlFile">
+  <button onclick="upload()">Upload</button>
+  <h2>Output JSON:</h2>
+  <pre id="output" style="background:#f0f0f0; padding:10px;"></pre>
+
+  <script>
+    async function upload() {
+      const fileInput = document.getElementById('xmlFile');
+      if (!fileInput.files[0]) {
+        alert("Please choose a file first!");
+        return;
+      }
+      const file = fileInput.files[0];
+      const formData = new FormData();
+      formData.append('file', file);
+
+      try {
+        const res = await fetch('/api/xmlToJson', {
+          method: 'POST',
+          body: formData
+        });
+        const data = await res.json();
+        document.getElementById('output').textContent = JSON.stringify(data.result, null, 2);
+      } catch (err) {
+        console.error(err);
+        alert("Error uploading file. Check console.");
+      }
+    }
+  </script>
+</body>
+</html>
