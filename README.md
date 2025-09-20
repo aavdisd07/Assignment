@@ -1,39 +1,34 @@
 # XML → JSON Converter
 
-A simple REST API that converts XML files to JSON using a **custom parser** — no XML libraries required.
+## Project Overview
+This project provides a custom XML → JSON converter exposed as a REST API.  
+It does **not use any XML parsing libraries**. The parser handles:
+
+- XML declarations (`<?xml ...?>`)
+- Comments (`<!-- ... -->`)
+- Nested elements with hierarchy
+- Attributes (`id="001"` → `_id: "001"`)
+- Self-closing tags (`<element/>`)
+- Text content
+- Entity references (`&amp;`, `&lt;`, `&gt;`, `&quot;`, `&apos;`)
+- Mixed content and repeated elements (converted to arrays)
+
+The project also includes a **minimal frontend** to test the API.
 
 ---
 
-## Features
-- Convert XML to JSON
-- Handles nested elements and repeated tags
-- Converts attributes to `_key` format
-- Supports self-closing tags
-- Decodes common XML entities (`&amp;`, `&lt;`, etc.)
-- Ignores comments and XML declarations
-- Preserves mixed content (text + children)
+## Live Deployment
+- API & Frontend URL: `https://<your-deployed-url>.onrender.com/`  
+*(replace `<your-deployed-url>` with your actual Render URL)*
 
 ---
 
-## API Endpoint
+## Local Setup
 
-### `POST /api/xmlToJson`
-- **Input**:
-  - `multipart/form-data` with a file field named `file` (optional)
-  - If no file uploaded, `./test.xml` is used
-- **Output**:
-  - JSON `{ message, data }` where `data` is the parsed XML
-- **Side-effect**:
-  - Saves `output.json` to the project root
+1. Clone the repository and run:
 
----
-
-## Setup & Usage
-
-1. Install dependencies:
-   ```bash
-   npm install
-2. Start the Server:
-   ```bash
-   npm start
-   
+```bash
+git clone https://github.com/aavdisd07/Assignment.git
+cd Assignment
+npm install
+node server.js
